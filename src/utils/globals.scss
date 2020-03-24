@@ -1,0 +1,32 @@
+// Colors
+$primary: #094764;
+$secondary: #2696AA;
+$accent: #DEF8F5;
+$dark: #282828;
+$light: #fafafa;
+
+// Spacing
+$margin: 16;
+$padding: 16;
+
+// Dimensions
+$mainClamp: 1200;
+
+// Border
+$borderRadius: 8;
+
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  accent: $accent;
+  dark: $dark;
+  light: $light;
+
+  margin: $margin;
+  padding: $padding;
+
+  mainClamp: $mainClamp;
+
+  borderRadius: $borderRadius;
+}
