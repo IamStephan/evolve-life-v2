@@ -1,0 +1,48 @@
+@import '../../utils/globals.scss';
+
+.navbar-container {
+  position: sticky;
+  top: 0px;
+
+  .navbar {
+    display: flex;
+    padding: #{$padding}px;
+
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .nav-btn {
+        margin-right: #{$margin * 2}px;
+      }
+    }
+
+    .center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .img-full {
+        min-height: 50px;
+      }
+
+      .img-mini {
+        min-height: 15px;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .nav-btn {
+        margin-left: #{$margin * 2}px;
+      }
+    }
+  }
+}

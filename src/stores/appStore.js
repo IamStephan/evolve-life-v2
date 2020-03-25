@@ -6,6 +6,6 @@ class AppStore {
   }
 }
 
-const store = new AppStore
+const store = new AppStore()
 
 export default store

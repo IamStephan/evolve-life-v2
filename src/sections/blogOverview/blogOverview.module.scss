@@ -1,0 +1,167 @@
+@import '../../utils/globals.scss';
+
+$breakpointOne: 830;
+$breakpointTwo: 675;
+$breakpointThree: 450;
+
+.blog-overview {
+  padding: #{$padding}px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 225px);
+  grid-auto-rows: 225px;
+  grid-gap: #{$padding}px;
+
+  .item {
+    border-radius: #{$borderRadius}px;
+    position: relative;
+    overflow: hidden;
+
+    .img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  .item-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: $primary;
+    padding: #{$padding * 2}px;
+
+    .title {
+      color: $light;
+      font-size: 3rem;
+    }
+
+    .content {
+      color: $light;
+      font-size: 1.75rem;
+    }
+  }
+
+  .item-2 {
+    .content {
+      position: absolute;
+      bottom: -100%;
+      left: 0px;
+      width: 100%;
+      background-color: rgba($dark, 0.9);
+      z-index: 2;
+      opacity: 0;
+      transition: bottom 200ms ease-in-out, opacity 200ms ease-in-out;
+      padding: #{$padding}px;
+      display: flex;
+      flex-direction: column;
+
+      .content-title {
+        color: $light;
+      }
+    }
+
+    &:hover {
+      .content {
+        bottom: 0px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .item-6 {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: #{$breakpointOne}px) {
+  .blog-overview {
+    .item-1 {
+      grid-column: span 3;
+    }
+  
+    .item-4 {
+      grid-column: span 2;
+    }
+  
+    .item-5 {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTwo}px) {
+  .blog-overview {
+    .item-1 {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+  
+    .item-2 {
+      grid-column: span 2;
+    }
+  
+    .item-3 {
+      grid-column: span 2;
+    }
+  
+    .item-4 {
+      grid-column: span 2;
+    }
+  
+    .item-5 {
+      grid-column: span 2;
+    }
+  
+    .item-6 {
+      grid-column: span 2;
+    }
+  
+    .item-7 {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointThree}px) {
+  .blog-overview {
+    .item-1 {
+      grid-row: span 2;
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .content {
+        font-size: 1.25rem;
+      }
+    }
+  
+    .item-2 {
+      grid-column: span 4;
+    }
+  
+    .item-3 {
+      grid-column: span 4;
+    }
+  
+    .item-4 {
+      grid-column: span 4;
+    }
+  
+    .item-5 {
+      grid-column: span 4;
+    }
+  
+    .item-6 {
+      grid-column: span 4;
+    }
+  
+    .item-7 {
+      grid-column: span 4;
+    }
+  }
+}

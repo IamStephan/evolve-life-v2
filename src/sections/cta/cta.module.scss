@@ -1,0 +1,88 @@
+@import '../../utils/globals.scss';
+
+$breakpointOne: 950;
+$breakpointTwo: 520;
+
+.cta-container {
+  background-color: $primary;
+  padding: #{$padding * 3}px;
+
+  .cta {
+    display: flex;
+
+    .left {
+      flex: 1;
+
+      .title {
+        color: $light;
+        font-size: 2.5rem;
+      }
+
+      .content {
+        color: $light;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+
+      .actions {
+        .btn {
+          min-width: 200px;
+        }
+        .btn:first-child {
+          margin-right: #{$margin}px;
+          background-color: $light;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$breakpointOne}px) {
+  .cta-container {
+    .cta {
+      flex-direction: column;
+  
+      .left {
+        .title {
+          text-align: center;
+        }
+  
+        .content {
+          text-align: center;
+          margin-bottom: #{$margin}px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTwo}px) {
+  .cta-container {
+    .cta {
+      flex-direction: column;
+      .left {
+        .title {
+          font-size: 2rem;
+        }
+      }
+      .right {
+        .actions {
+          display: flex;
+          flex-direction: column;
+
+          .btn {
+            &:first-child {
+              margin-right: 0px;
+              margin-bottom: #{$margin}px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

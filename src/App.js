@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import loadable from 'react-loadable';
 
 import ScrollToTop from './components/scrollToTop/scrollToTop';
-// import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/navbar';
 // import Footer from './components/footer/footer';
 
 // import Loader from './components/loader/loader';
